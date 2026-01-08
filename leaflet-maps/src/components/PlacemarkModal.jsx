@@ -227,7 +227,7 @@ const PlacemarkModal = ({
             borderTop: '1px solid #eee'
           }}>
             <ActionButton 
-              text="Показать маршрут" 
+              text="Позвонить" 
               primary 
               onClick={() => console.log('Маршрут к:', placemark.title)}
             />

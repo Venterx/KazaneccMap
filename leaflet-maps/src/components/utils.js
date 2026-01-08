@@ -1,33 +1,33 @@
 
 import L from 'leaflet';
 
-// 1. ДОБАВЬТЕ ГРАНИЦЫ КАЗАНИ В КОНСТАНТЫ
+
 export const KAZAN_BOUNDS = [
-  [55.50, 48.50], // Юго-запад
-  [56.10, 49.70]  // Северо-восток
+  [55.50, 48.50], 
+  [56.10, 49.70]  
 ];
 
-// 2. ОБНОВИТЕ DEFAULT_SETTINGS - добавьте mapBounds
+
 export const DEFAULT_SETTINGS = {
   center: [55.7963, 49.1083],
   defaultZoom: 13,
   minZoom: 13,
   maxZoom: 16,
   imageBounds: [[55.721, 48.987], [55.852, 49.264]],
-  mapBounds: KAZAN_BOUNDS, // Добавьте эту строку
+  mapBounds: KAZAN_BOUNDS, 
   zoomSpeed: 0.5,
   zoomWheelSpeed: 0.5,
   imageOpacity: 1,
   tileLayerOpacity: 0.3
 };
 
-// 3. ДОБАВЬТЕ ФУНКЦИЮ ДЛЯ ПРОВЕРКИ ГРАНИЦ (опционально)
+
 export const isWithinKazanBounds = (latlng) => {
   const bounds = L.latLngBounds(KAZAN_BOUNDS);
   return bounds.contains(latlng);
 };
 
-// 4. ДОБАВЬТЕ ФУНКЦИЮ ДЛЯ ОГРАНИЧЕНИЯ КООРДИНАТ
+
 export const clampToKazanBounds = (latlng) => {
   const bounds = L.latLngBounds(KAZAN_BOUNDS);
   const lat = Math.max(bounds.getSouth(), Math.min(bounds.getNorth(), latlng.lat));
@@ -35,7 +35,7 @@ export const clampToKazanBounds = (latlng) => {
   return L.latLng(lat, lng);
 };
 
-// 5. ДОБАВЬТЕ ФУНКЦИЮ ДЛЯ ЦЕНТРИРОВАНИЯ КАРТЫ В КАЗАНИ
+
 export const flyToKazan = (map, zoom = 13, duration = 1) => {
   if (map) {
     map.flyTo(DEFAULT_SETTINGS.center, zoom, {
@@ -45,7 +45,7 @@ export const flyToKazan = (map, zoom = 13, duration = 1) => {
   }
 };
 
-// 6. ОБНОВИТЕ ФУНКЦИЮ moveBounds, ЧТОБЫ НЕ ВЫХОДИТЬ ЗА ГРАНИЦЫ
+
 export const moveBounds = (bounds, direction, amount = 0.01) => {
   const newBounds = [...bounds];
   
@@ -80,11 +80,11 @@ export const moveBounds = (bounds, direction, amount = 0.01) => {
       break;
   }
   
-  // Проверяем, не вышли ли за границы Казани
+  
   const kazanBounds = L.latLngBounds(KAZAN_BOUNDS);
   const movedBounds = L.latLngBounds(newBounds[0], newBounds[1]);
   
-  // Если новые границы выходят за пределы Казани, возвращаем старые
+  
   if (!kazanBounds.contains(movedBounds.getNorthEast()) || 
       !kazanBounds.contains(movedBounds.getSouthWest())) {
     console.warn('Движение за пределы Казани заблокировано');
@@ -98,8 +98,8 @@ export const moveBounds = (bounds, direction, amount = 0.01) => {
 export const createCustomIcon = (categories, category, isActive = false) => {
   const categoryInfo = categories.find(cat => cat.id === category) || categories[0];
   
-  // УВЕЛИЧИЛИ РАЗМЕРЫ:
-  const size = isActive ? 48 : 40; // Было 32 и 28
+ 
+  const size = isActive ? 48 : 40; 
   const iconSize = [size, size];
   const iconAnchor = [size / 2, size];
   const popupAnchor = [0, -size];

@@ -68,6 +68,20 @@ export const kazanPlacemarks = [
     tags: ["архитектура", "фото"],
     phone: "+7 (843) 221-76-00",
     workingHours: "Круглосуточно"
+  },
+  {
+    id: 6,
+    title: "тестовый",
+    category: "shopping",
+    coordinates: [55.8553, 49.0069],
+    description: "Тестовый вариант",
+    rating: 4.2,
+    price: "Бесплатно",
+    address: "ул. Тестов, 42",
+    image: "https://example.com/palace.jpg",
+    tags: ["архитектура", "фото"],
+    phone: "+7 (900) 000-00-00",
+    workingHours: "Круглотестово"
   }
 ];
 
