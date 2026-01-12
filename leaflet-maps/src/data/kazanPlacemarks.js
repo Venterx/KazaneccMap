@@ -3,7 +3,7 @@ export const kazanPlacemarks = [
     id: 1,
     title: "Казанский Кремль",
     category: "culture",
-    coordinates: [55.7986, 49.1053], // Координаты Кремля
+    coordinates: [55.7986, 49.1053], 
     description: "Объект Всемирного наследия ЮНЕСКО",
     rating: 4.9,
     price: "Бесплатно",
@@ -69,20 +69,91 @@ export const kazanPlacemarks = [
     phone: "+7 (843) 221-76-00",
     workingHours: "Круглосуточно"
   },
-  {
+    {
     id: 6,
-    title: "тестовый",
-    category: "shopping",
-    coordinates: [55.8553, 49.0069],
-    description: "Тестовый вариант",
-    rating: 4.2,
+    title: "Центр семьи «Казан» (Чаша)",
+    category: "architecture",
+    coordinates: [55.8128, 49.1080],
+    description: "Главный дворец бракосочетаний Казани",
+    rating: 4.8,
     price: "Бесплатно",
-    address: "ул. Тестов, 42",
-    image: "https://example.com/palace.jpg",
-    tags: ["архитектура", "фото"],
-    phone: "+7 (900) 000-00-00",
-    workingHours: "Круглотестово"
+    address: "ул. Сибгата Хакима, 4",
+    image: "https://example.com/chasha.jpg",
+    tags: ["архитектура", "панорама", "фото"],
+    phone: "+7 (843) 567-81-00",
+    workingHours: "9:00-18:00"
+  },
+  {
+    id: 7,
+    title: "Набережная озера Кабан",
+    category: "nature",
+    coordinates: [55.7829, 49.1229],
+    description: "Современная прогулочная зона у воды",
+    rating: 4.7,
+    price: "Бесплатно",
+    address: "озеро Кабан, Казань",
+    image: "https://example.com/kaban.jpg",
+    tags: ["прогулка", "природа", "вечер"],
+    phone: "",
+    workingHours: "Круглосуточно"
+  },
+  {
+    id: 8,
+    title: "Храм всех религий",
+    category: "culture",
+    coordinates: [55.8463, 48.9066],
+    description: "Уникальный архитектурный комплекс",
+    rating: 4.6,
+    price: "Добровольное пожертвование",
+    address: "ул. Старо-Аракчинская, 4",
+    image: "https://example.com/religions.jpg",
+    tags: ["культура", "религия", "архитектура"],
+    phone: "+7 (843) 240-70-94",
+    workingHours: "10:00-18:00"
+  },
+  {
+    id: 9,
+    title: "Парк Горького",
+    category: "entertainment",
+    coordinates: [55.7989, 49.1477],
+    description: "Популярный городской парк для отдыха",
+    rating: 4.5,
+    price: "Бесплатно",
+    address: "ул. Ершова, Казань",
+    image: "https://example.com/gorky-park.jpg",
+    tags: ["парк", "отдых", "аттракционы"],
+    phone: "",
+    workingHours: "6:00-23:00"
+  },
+  {
+    id: 10,
+    title: "Аквапарк «Ривьера»",
+    category: "entertainment",
+    coordinates: [55.8197, 49.1312],
+    description: "Крупнейший аквапарк в России",
+    rating: 4.4,
+    price: "Платно",
+    address: "пр-т Фатыха Амирхана, 1",
+    image: "https://example.com/riviera.jpg",
+    tags: ["аквапарк", "семья", "развлечения"],
+    phone: "+7 (843) 526-57-57",
+    workingHours: "9:00-22:00"
+  },
+  {
+    id: 11,
+    title: "Национальный музей Республики Татарстан",
+    category: "history",
+    coordinates: [55.7946, 49.1114],
+    description: "Главный исторический музей региона",
+    rating: 4.6,
+    price: "Платно",
+    address: "ул. Кремлёвская, 2",
+    image: "https://example.com/museum-rt.jpg",
+    tags: ["музей", "история", "культура"],
+    phone: "+7 (843) 292-89-84",
+    workingHours: "10:00-18:00"
   }
+
 ];
 
 export const categories = [
